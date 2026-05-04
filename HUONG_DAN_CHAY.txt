@@ -1,0 +1,56 @@
+PHÂN TÍCH THUẬT TOÁN TSP - HƯỚNG DẪN CHẠY
+
+1. Cách chạy nhanh nhất
+- Bấm đúp BUILD_PHAN_TICH_THUAT_TOAN.bat
+  Script này sẽ:
+  - clean kết quả cũ
+  - chạy lại benchmark so sánh thuật toán
+  - sinh report HTML, biểu đồ, bảng CSV/XLSX
+  - đóng gói thành file Phân_tích_thuật_toán.zip
+
+2. Các file bat chính
+- BUILD_PHAN_TICH_THUAT_TOAN.bat
+  Dùng để clean + build + package.
+- CLICK_RUN_ALL.bat
+  Chạy benchmark và mở report/biểu đồ.
+- RUN_GUI.bat
+  Mở giao diện chọn file tọa độ để so sánh thuật toán trên 1 bộ điểm bất kỳ.
+- OPEN_REPORT.bat
+  Mở file report result\algorithm_report.html.
+
+3. Cách chạy bằng command line
+- python easy_run.py compare --open-report
+- python easy_run.py gui
+- python easy_run.py clean
+- python easy_run.py package
+- python easy_run.py rebuild-package
+
+4. Đầu vào hợp lệ cho GUI
+- File .csv hoặc .txt chứa ít nhất 3 cặp tọa độ (x, y)
+- Ví dụ:
+  0.12 0.45
+  0.33 0.71
+  0.90 0.10
+
+5. Thư mục và file kết quả
+- result\algorithm_report.html
+- result\algorithm_benchmark.csv
+- result\algorithm_benchmark_raw.csv
+- result\algorithm_summary.csv
+- result\algorithm_tables.xlsx
+- result\runtime_comparison.png
+- result\distance_comparison.png
+- result\gap_comparison.png
+- result\time_quality_tradeoff.png
+- result\tsp_40.gif
+- result\tsp_100.gif
+- result\tsp_200.gif
+
+6. Nếu máy không có .venv
+- Cài Python 3.10+ hoặc mới hơn.
+- Cài thư viện:
+  pip install -r requirements-analysis.txt
+
+7. Ghi chú
+- requirements-analysis.txt chỉ phục vụ nhanh phần phân tích thuật toán và GUI.
+- Nếu muốn chạy phần Pointer Network / PyTorch, cần cài thêm torch phù hợp máy của bạn.

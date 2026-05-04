@@ -1,0 +1,12 @@
+.venv/
+.vs/
+.vscode/
+
+__pycache__/
+*.py[cod]
+
+result/
+*.rar
+
+.DS_Store
+Thumbs.db
